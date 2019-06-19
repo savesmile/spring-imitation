@@ -1,8 +1,9 @@
-package com.f_lin.imitation.factory;
+package com.f_lin.imitation.beans.factory;
 
-import com.f_lin.imitation.support.BeanDefinition;
-import com.f_lin.imitation.support.PropertyValue;
-import com.f_lin.imitation.support.PropertyValues;
+import com.f_lin.imitation.beans.support.BeanDefinition;
+import com.f_lin.imitation.beans.support.PropertyValue;
+import com.f_lin.imitation.beans.support.PropertyValues;
+import com.f_lin.imitation.test.HelloWorldBeanTest;
 import org.junit.Test;
 
 /**
@@ -17,7 +18,7 @@ public class BeanFactoryTest {
 
         //解析xml为bean定义
         BeanDefinition beanDefinition = new BeanDefinition();
-        beanDefinition.setBeanClassName("com.f_lin.imitation.factory.HelloWorldBeanTest");
+        beanDefinition.setBeanClassName("com.f_lin.imitation.test.HelloWorldBeanTest");
 
         //解析xml中的相关bean属性
         PropertyValue value1 = new PropertyValue("name", "hello name");
@@ -31,7 +32,7 @@ public class BeanFactoryTest {
         beanDefinition.setPropertyValues(propertyValues);
 
         //注册bean
-        beanFactory.registryBeanDefinition("HelloWorldBeanTest", beanDefinition);
+        ((AbstractBeanFactory)beanFactory).registerBeanDefinition("HelloWorldBeanTest", beanDefinition);
 
         //生产bean
         HelloWorldBeanTest helloWorldBeanTest = (HelloWorldBeanTest)beanFactory.getBean("HelloWorldBeanTest");

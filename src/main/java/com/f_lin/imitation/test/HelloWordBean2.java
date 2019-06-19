@@ -1,4 +1,4 @@
-package com.f_lin.imitation.factory;
+package com.f_lin.imitation.test;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +13,6 @@ import lombok.ToString;
 @Getter
 @ToString
 @NoArgsConstructor
-public class HelloWorldBeanTest {
-    private String name;
-    private String value;
-    private String type;
+public class HelloWordBean2 {
+    private String text;
 }

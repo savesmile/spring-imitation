@@ -1,4 +1,4 @@
-package com.f_lin.imitation.support;
+package com.f_lin.imitation.beans.support;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

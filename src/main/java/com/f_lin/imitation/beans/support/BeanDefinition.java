@@ -1,4 +1,4 @@
-package com.f_lin.imitation.support;
+package com.f_lin.imitation.beans.support;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +22,7 @@ public class BeanDefinition {
 
     @Setter
     @Getter
-    private PropertyValues propertyValues;
+    private PropertyValues propertyValues = new PropertyValues();
 
 
     public void setBeanClassName(String beanClassName) {
